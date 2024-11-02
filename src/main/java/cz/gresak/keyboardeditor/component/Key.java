@@ -170,8 +170,8 @@ public class Key extends Pane {
         bottomLeftChar.setLayoutY(bottomLine);
         bottomRightChar.setLayoutY(bottomLine);
         // horizontal alignment (needed only for the right column)
-        double topLeftWidth = fontLoader.computeStringWidth(topLeftChar.getText(), topLeftChar.getFont());
-        double bottomLeftWidth = fontLoader.computeStringWidth(bottomLeftChar.getText(), bottomLeftChar.getFont());
+        double topLeftWidth = 0.0; // fontLoader.computeStringWidth(topLeftChar.getText(), topLeftChar.getFont());
+        double bottomLeftWidth = 0.0; // fontLoader.computeStringWidth(bottomLeftChar.getText(), bottomLeftChar.getFont());
         double maxLeftColumnLayoutX = Math.max(topLeftChar.getLayoutX(), bottomLeftChar.getLayoutX());
         double xOffset = Math.max(
                 (getWidth() / 2 - HPADDING) + KEY_COLUMN_SPACE, // center of the key

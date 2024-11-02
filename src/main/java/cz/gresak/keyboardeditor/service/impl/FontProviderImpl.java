@@ -81,7 +81,7 @@ public class FontProviderImpl implements FontProvider {
     @Override
     public double getFontSize(String text, Font font, double widthToFit, double heightToFit) {
         FontLoader fontLoader = Toolkit.getToolkit().getFontLoader();
-        double sampleWidth = fontLoader.computeStringWidth(text, font);
+        double sampleWidth = 0.0; // fontLoader.computeStringWidth(text, font);
         double fontSizeWidth = (widthToFit / sampleWidth) * font.getSize();
 
         FontMetrics fontMetrics = fontLoader.getFontMetrics(font);
